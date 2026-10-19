@@ -1,16 +1,39 @@
-# React + Vite
+# dom-lab-react
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project initialization
 
-Currently, two official plugins are available:
+This project is a React application. The steps below describe a typical setup from creating the project through running it locally.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### 1. Create the project
 
-## React Compiler
+Install [Node.js](https://nodejs.org/) first; npm is included with it. To scaffold a React project with Vite, run:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm create vite@latest dom-lab-react -- --template react
+cd dom-lab-react
+```
 
-## Expanding the ESLint configuration
+The scaffolding command creates the project files, including the package manifest (`package.json`), the application source, and the Vite configuration.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 2. Install dependencies
+
+From the project directory, run:
+
+```bash
+npm install
+```
+
+npm reads `package.json` and downloads the project’s dependencies into `node_modules`. It also creates or updates `package-lock.json` to record the resolved dependency versions. The lockfile should be kept with the project so installs can be reproduced.
+
+### 3. Run the development server
+
+```bash
+npm run dev
+```
+
+Vite prints a local address in the terminal. Open that address in a browser to view the starter application. While the server is running, edits to the source are reflected in the browser.
+
+### Current starting point
+
+After these steps, the React/Vite starter is installed and running, ready for the application’s features to be added. `src/App.jsx` is the main component to edit, and `src/main.jsx` mounts the React application in the page. Useful scripts are `npm run build` to create a production build and `npm run preview` to inspect that build locally.
+
